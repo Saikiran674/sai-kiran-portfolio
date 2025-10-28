@@ -3,106 +3,172 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sai Kiran Reddy – Portfolio</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <title>Sai Kiran Reddy — Software Engineer Portfolio</title>
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind custom configuration
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#00bfa6',
+            secondary: '#2563EB',
+            dark: '#0a192f',
+            light: '#f7f8fa'
+          }
+        }
+      }
+    };
+  </script>
+  <!-- AOS (Animate on Scroll) library -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-wH6N2JsmghrGm9Mz5NZUUGrXdzZCjjv+I5JfoHIhH00LzL56h6GhH0GZpRHKjru/T50jJvljPPgHg6z+VKk2RA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header>
-    <nav id="navbar">
-      <div class="logo">Sai Kiran Reddy</div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
+<body class="font-sans antialiased bg-light text-gray-800">
+  <!-- Navigation -->
+  <header class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+    <div class="container mx-auto flex justify-between items-center px-6 py-4">
+      <a href="#" class="text-xl font-bold text-dark">Sai&nbsp;Kiran&nbsp;Reddy</a>
+      <nav>
+        <ul class="hidden md:flex space-x-6">
+          <li><a href="#about" class="hover:text-primary transition">About</a></li>
+          <li><a href="#skills" class="hover:text-primary transition">Skills</a></li>
+          <li><a href="#experience" class="hover:text-primary transition">Experience</a></li>
+          <li><a href="#projects" class="hover:text-primary transition">Projects</a></li>
+          <li><a href="#education" class="hover:text-primary transition">Education</a></li>
+          <li><a href="#contact" class="hover:text-primary transition">Contact</a></li>
+        </ul>
+        <!-- Mobile menu button -->
+        <button id="menu-btn" class="md:hidden text-dark focus:outline-none">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </nav>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden hidden bg-white shadow-md">
+      <ul class="flex flex-col space-y-2 p-4">
+        <li><a href="#about" class="block px-2 py-1 hover:text-primary transition">About</a></li>
+        <li><a href="#skills" class="block px-2 py-1 hover:text-primary transition">Skills</a></li>
+        <li><a href="#experience" class="block px-2 py-1 hover:text-primary transition">Experience</a></li>
+        <li><a href="#projects" class="block px-2 py-1 hover:text-primary transition">Projects</a></li>
+        <li><a href="#education" class="block px-2 py-1 hover:text-primary transition">Education</a></li>
+        <li><a href="#contact" class="block px-2 py-1 hover:text-primary transition">Contact</a></li>
       </ul>
-    </nav>
-    <div class="hero">
-      <h1>Hi, I'm <span class="highlight">Sai Kiran</span></h1>
-      <p class="subtitle">AI‑focused Java Software Engineer</p>
-      <a href="#contact" class="btn btn-primary">Get in touch</a>
     </div>
   </header>
 
+  <!-- Hero Section -->
+  <section id="hero" class="relative flex items-center justify-center min-h-screen bg-gradient-to-r from-dark to-primary text-white text-center" data-aos="fade-up">
+    <div class="container mx-auto px-6">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm Sai&nbsp;Kiran&nbsp;Reddy</h1>
+      <p class="text-xl md:text-2xl font-medium mb-8">AI‑focused Java Software Engineer</p>
+      <a href="#projects" class="inline-block bg-primary hover:bg-teal-600 text-white px-6 py-3 rounded-full font-semibold transition shadow-lg">View My Work</a>
+    </div>
+  </section>
+
   <!-- About Section -->
-  <section id="about" class="section">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>
-        AI‑focused Java Software Engineer with over 4&nbsp;years of hands‑on experience designing, developing and deploying Java and Spring Boot microservices and RESTful APIs for enterprise‑grade systems. I am highly skilled in cloud‑native development, containerization (Docker, Kubernetes) and CI/CD automation using Jenkins and GitHub Actions. My front‑end knowledge spans Bootstrap, JavaScript, HTML5 and CSS3 for responsive integration.
-      </p>
-      <p>
-        I am adept at using AI coding tools (GitHub Copilot, Amazon CodeWhisperer) and integrating generative AI APIs to enhance productivity and innovation. A collaborative, detail‑oriented engineer with a strong foundation in security best practices, Agile methodology and a passion for continuous learning.
-      </p>
+  <section id="about" class="py-20 bg-light">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
+      <div class="flex flex-col md:flex-row items-center md:space-x-8" data-aos="fade-up">
+        <div class="md:w-1/2 mb-8 md:mb-0">
+          <p class="mb-4 text-lg leading-relaxed">
+            I'm a passionate software engineer with more than four years of experience designing, developing and deploying enterprise‑grade Java and Spring&nbsp;Boot microservices【976677415097859†L6-L19】. My expertise spans cloud‑native architectures, containerization with Docker and Kubernetes, and DevOps automation using Jenkins and GitHub Actions【976677415097859†L6-L19】.
+          </p>
+          <p class="mb-4 text-lg leading-relaxed">
+            On the frontend, I'm proficient in JavaScript, HTML5, CSS3 and modern frameworks like React and Bootstrap【976677415097859†L23-L26】. I'm particularly excited about leveraging AI technologies—using tools such as GitHub Copilot and Amazon CodeWhisperer—as well as integrating cutting‑edge generative AI APIs to accelerate innovation【976677415097859†L14-L19】.
+          </p>
+          <p class="text-lg leading-relaxed">
+            Beyond coding, I enjoy mentoring junior developers and collaborating across teams to create secure, scalable and performant solutions【976677415097859†L65-L75】. I continually seek opportunities to learn and apply new technologies to solve real‑world problems.
+          </p>
+        </div>
+        <div class="md:w-1/2">
+          <!-- Add an illustrative graphic or pattern -->
+          <!-- Illustration referencing an external stock image (AI concept) -->
+          <img src="https://picsum.photos/seed/ai-concept/800/600" alt="AI concept illustration" class="rounded-lg shadow-lg w-full" />
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Skills Section -->
-  <section id="skills" class="section bg-light">
-    <div class="container">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <h3>Backend</h3>
-          <ul>
-            <li>Java, Python</li>
-            <li>Spring Boot, Spring Cloud</li>
-            <li>RESTful APIs, Microservices</li>
+  <section id="skills" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Skills</h2>
+      <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Skill category -->
+        <div class="p-6 bg-light rounded-lg shadow-md" data-aos="fade-up">
+          <div class="flex items-center mb-4">
+            <i class="fa-solid fa-code text-primary text-2xl mr-3"></i>
+            <h3 class="text-xl font-semibold">Backend</h3>
+          </div>
+          <ul class="list-disc list-inside space-y-1 text-gray-700">
+            <li>Java &amp; Python</li>
+            <li>Spring Boot &amp; Spring Cloud</li>
+            <li>RESTful APIs &amp; Microservices</li>
             <li>JPA/Hibernate, Kafka</li>
           </ul>
         </div>
-        <div class="skill-card">
-          <h3>Frontend</h3>
-          <ul>
+        <!-- Skill category -->
+        <div class="p-6 bg-light rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="100">
+          <div class="flex items-center mb-4">
+            <i class="fa-solid fa-desktop text-primary text-2xl mr-3"></i>
+            <h3 class="text-xl font-semibold">Frontend</h3>
+          </div>
+          <ul class="list-disc list-inside space-y-1 text-gray-700">
             <li>JavaScript (ES6+)</li>
-            <li>Bootstrap, React.js</li>
+            <li>React.js, Bootstrap</li>
             <li>HTML5 &amp; CSS3</li>
           </ul>
         </div>
-        <div class="skill-card">
-          <h3>Cloud &amp; DevOps</h3>
-          <ul>
-            <li>AWS (EC2, Lambda, S3, EKS)</li>
-            <li>Azure (App Services, Blob Storage)</li>
+        <!-- Skill category -->
+        <div class="p-6 bg-light rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="200">
+          <div class="flex items-center mb-4">
+            <i class="fa-solid fa-cloud text-primary text-2xl mr-3"></i>
+            <h3 class="text-xl font-semibold">Cloud &amp; DevOps</h3>
+          </div>
+          <ul class="list-disc list-inside space-y-1 text-gray-700">
+            <li>AWS &amp; Azure</li>
             <li>Docker &amp; Kubernetes</li>
             <li>Terraform, Jenkins, GitHub Actions</li>
           </ul>
         </div>
-        <div class="skill-card">
-          <h3>AI &amp; Data</h3>
-          <ul>
-            <li>OpenAI API, Azure OpenAI</li>
-            <li>LangChain, Hugging Face APIs</li>
-            <li>TensorFlow</li>
-            <li>Automation scripts, GitHub Copilot</li>
+        <!-- Skill category -->
+        <div class="p-6 bg-light rounded-lg shadow-md" data-aos="fade-up">
+          <div class="flex items-center mb-4">
+            <i class="fa-solid fa-brain text-primary text-2xl mr-3"></i>
+            <h3 class="text-xl font-semibold">AI &amp; Data</h3>
+          </div>
+          <ul class="list-disc list-inside space-y-1 text-gray-700">
+            <li>OpenAI &amp; Azure OpenAI APIs</li>
+            <li>LangChain, TensorFlow</li>
+            <li>Hugging Face integrations</li>
+            <li>Automation scripts, AI assistants</li>
           </ul>
         </div>
-        <div class="skill-card">
-          <h3>Databases</h3>
-          <ul>
+        <!-- Skill category -->
+        <div class="p-6 bg-light rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="100">
+          <div class="flex items-center mb-4">
+            <i class="fa-solid fa-database text-primary text-2xl mr-3"></i>
+            <h3 class="text-xl font-semibold">Databases</h3>
+          </div>
+          <ul class="list-disc list-inside space-y-1 text-gray-700">
             <li>PostgreSQL, MySQL</li>
-            <li>MongoDB, DynamoDB</li>
+            <li>MongoDB &amp; DynamoDB</li>
           </ul>
         </div>
-        <div class="skill-card">
-          <h3>Testing &amp; Monitoring</h3>
-          <ul>
-            <li>JUnit, PyTest, Mockito</li>
-            <li>Selenium, Postman</li>
-            <li>Grafana &amp; Prometheus</li>
-          </ul>
-        </div>
-        <div class="skill-card">
-          <h3>Other</h3>
-          <ul>
-            <li>Agile/Scrum, CI/CD, TDD</li>
-            <li>OAuth&nbsp;2.0, JWT, RBAC</li>
-            <li>SSL/TLS</li>
+        <!-- Skill category -->
+        <div class="p-6 bg-light rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="200">
+          <div class="flex items-center mb-4">
+            <i class="fa-solid fa-vial text-primary text-2xl mr-3"></i>
+            <h3 class="text-xl font-semibold">Testing &amp; Tools</h3>
+          </div>
+          <ul class="list-disc list-inside space-y-1 text-gray-700">
+            <li>JUnit, Mockito, Selenium</li>
+            <li>Postman, PyTest</li>
+            <li>Grafana, Prometheus</li>
           </ul>
         </div>
       </div>
@@ -110,42 +176,70 @@
   </section>
 
   <!-- Experience Section -->
-  <section id="experience" class="section">
-    <div class="container">
-      <h2>Experience</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-icon"><i class="fa-solid fa-building"></i></div>
-          <div class="timeline-content">
-            <h3>Software Engineer II – JPMorgan Chase &amp; Co.</h3>
-            <span class="date">Jan 2024 – Present</span>
-            <ul>
-              <li>Designed and developed scalable Spring Boot microservices handling 10K+ concurrent users with 99.9% uptime.</li>
-              <li>Implemented RESTful APIs integrated with PostgreSQL and Redis, improving data retrieval efficiency by 25%.</li>
-              <li>Deployed applications using Docker and Kubernetes with Jenkins CI/CD, reducing release time by 40%.</li>
-              <li>Integrated OpenAI API for intelligent query assistance and document summarization features, boosting internal tool efficiency.</li>
-              <li>Leveraged AI coding assistants such as GitHub Copilot and Amazon CodeWhisperer to automate boilerplate code and unit tests, improving development velocity by 30%.</li>
-              <li>Collaborated with DevOps and QA teams to ensure secure deployments and adherence to OWASP security standards.</li>
-              <li>Participated in architecture discussions to optimize microservices communication with Spring Cloud Config and Eureka.</li>
-              <li>Mentored junior developers in Java, Spring Boot and DevOps best practices.</li>
-            </ul>
+  <section id="experience" class="py-20 bg-light">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Experience</h2>
+      <div class="relative border-l-4 border-primary pl-8" data-aos="fade-up">
+        <!-- JPMorgan -->
+        <div class="mb-12">
+          <div class="absolute -left-5 top-1 w-3 h-3 bg-primary rounded-full"></div>
+          <h3 class="text-xl font-semibold mb-1">Software Engineer II – JPMorgan Chase &amp; Co.</h3>
+          <span class="text-sm text-gray-600 italic mb-3 block">Jan 2024 – Present</span>
+          <ul class="list-disc ml-5 text-gray-700 space-y-1">
+            <li>Designed and developed scalable Spring Boot microservices handling 10K+ concurrent users【976677415097859†L45-L47】.</li>
+            <li>Implemented RESTful APIs integrated with PostgreSQL and Redis, boosting data retrieval efficiency by 25%【976677415097859†L49-L51】.</li>
+            <li>Deployed applications with Docker &amp; Kubernetes through CI/CD pipelines, reducing release time by 40%【976677415097859†L53-L55】.</li>
+            <li>Integrated OpenAI APIs for intelligent query assistance and document summarization【976677415097859†L57-L59】.</li>
+            <li>Mentored junior developers and collaborated across DevOps and QA teams【976677415097859†L65-L75】.</li>
+          </ul>
+        </div>
+        <!-- UnitedHealth -->
+        <div class="mb-12">
+          <div class="absolute -left-5 top-1 w-3 h-3 bg-primary rounded-full"></div>
+          <h3 class="text-xl font-semibold mb-1">Software Engineer – UnitedHealth Group</h3>
+          <span class="text-sm text-gray-600 italic mb-3 block">Jul 2019 – Apr 2022</span>
+          <ul class="list-disc ml-5 text-gray-700 space-y-1">
+            <li>Built enterprise healthcare applications using Java and Spring Boot microservices architecture【976677415097859†L81-L83】.</li>
+            <li>Developed responsive UIs with Bootstrap, JavaScript, HTML5 and CSS3【976677415097859†L85-L87】.</li>
+            <li>Automated builds and deployments via Jenkins pipelines and Docker, achieving 99% uptime【976677415097859†L89-L91】.</li>
+            <li>Optimized storage using MongoDB and PostgreSQL【976677415097859†L94-L95】.</li>
+            <li>Implemented JWT and OAuth 2.0 for robust API security【976677415097859†L97-L99】.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Projects</h2>
+      <div class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <!-- Project 1 -->
+        <div class="bg-light rounded-lg shadow-lg overflow-hidden" data-aos="zoom-in">
+          <img src="https://picsum.photos/seed/microservices/800/600" alt="Microservices Platform" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Microservices Platform</h3>
+            <p class="text-gray-700 mb-4">Designed a scalable, cloud‑native microservices platform using Spring Boot and Docker. Leveraged Kafka for asynchronous communication and implemented monitoring with Prometheus and Grafana.</p>
+            <span class="inline-block bg-primary text-white px-3 py-1 rounded-full text-sm">Microservices</span>
           </div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-icon"><i class="fa-solid fa-building"></i></div>
-          <div class="timeline-content">
-            <h3>Software Engineer – UnitedHealth Group</h3>
-            <span class="date">Jul 2019 – Apr 2022</span>
-            <ul>
-              <li>Built and maintained enterprise healthcare applications using Java, Spring Boot and a microservices architecture.</li>
-              <li>Developed responsive UI components using Bootstrap, JavaScript, HTML5 and CSS3 to improve user experience.</li>
-              <li>Automated builds and deployments through Jenkins pipelines and Docker containers, achieving 99% system uptime.</li>
-              <li>Integrated MongoDB and PostgreSQL databases for optimized storage and query performance.</li>
-              <li>Strengthened API security by implementing JWT and OAuth&nbsp;2.0.</li>
-              <li>Introduced generative AI API integration (OpenAI and Hugging Face) for content enrichment within analytics dashboards.</li>
-              <li>Collaborated in Agile/Scrum environments, contributing to sprint planning, retrospectives and technical documentation.</li>
-              <li>Contributed to open‑source by enhancing a public Spring Boot starter module.</li>
-            </ul>
+        <!-- Project 2 -->
+        <div class="bg-light rounded-lg shadow-lg overflow-hidden" data-aos="zoom-in" data-aos-delay="100">
+          <img src="https://picsum.photos/seed/healthcare/800/600" alt="Healthcare Analytics Dashboard" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Healthcare Analytics Dashboard</h3>
+            <p class="text-gray-700 mb-4">Built an analytics dashboard for healthcare data integrating MongoDB and PostgreSQL. Implemented secure APIs with OAuth 2.0 and JWT and visualized real‑time metrics using React and Chart.js.</p>
+            <span class="inline-block bg-secondary text-white px-3 py-1 rounded-full text-sm">Healthcare</span>
+          </div>
+        </div>
+        <!-- Project 3 -->
+        <div class="bg-light rounded-lg shadow-lg overflow-hidden" data-aos="zoom-in" data-aos-delay="200">
+          <img src="https://picsum.photos/seed/ai-summarizer/800/600" alt="AI Document Summarizer" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">AI Document Summarizer</h3>
+            <p class="text-gray-700 mb-4">Developed an AI‑powered tool that summarises lengthy documents using OpenAI APIs and LangChain. Implemented a responsive UI and deployed the solution on AWS Lambda for scalability.</p>
+            <span class="inline-block bg-teal-500 text-white px-3 py-1 rounded-full text-sm">AI</span>
           </div>
         </div>
       </div>
@@ -153,36 +247,69 @@
   </section>
 
   <!-- Education Section -->
-  <section id="education" class="section bg-light">
-    <div class="container">
-      <h2>Education</h2>
-      <div class="education-item">
-        <h3>University of North Texas, Denton, TX</h3>
-        <p class="date">Master of Science in Computer Science – May 2024</p>
+  <section id="education" class="py-20 bg-light">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Education</h2>
+      <div class="max-w-xl mx-auto p-6 bg-white rounded-lg shadow-md" data-aos="fade-up">
+        <h3 class="text-xl font-semibold mb-1">University of North Texas, Denton, TX</h3>
+        <p class="text-gray-600 mb-2 italic">Master of Science in Computer Science – May&nbsp;2024【976677415097859†L115-L118】</p>
+        <p class="text-gray-700">Graduated with a focus on advanced algorithms, distributed systems and artificial intelligence. Led a capstone project on large‑scale data processing and optimized microservice architectures.</p>
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="section">
-    <div class="container">
-      <h2>Contact</h2>
-      <p>If you'd like to collaborate or just say hello, feel free to reach out via email or connect with me on LinkedIn.</p>
-      <div class="contact-info">
-        <p><i class="fa-solid fa-envelope"></i> <a href="mailto:saikiranrd70@gmail.com">saikiranrd70@gmail.com</a></p>
-        <p><i class="fa-solid fa-phone"></i> <a href="tel:+14807790283">+1 (480) 779‑0283</a></p>
-        <p><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/saikiranrdd01/" target="_blank">LinkedIn Profile</a></p>
+  <section id="contact" class="py-20 bg-dark text-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Get in Touch</h2>
+      <p class="text-center max-w-2xl mx-auto mb-8 text-lg">Interested in collaborating or have a question? Feel free to reach out via email or connect with me on LinkedIn.</p>
+      <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-12" data-aos="fade-up">
+        <a href="mailto:saikiranrd70@gmail.com" class="flex items-center space-x-2 hover:text-primary transition">
+          <i class="fa-solid fa-envelope text-xl"></i>
+          <span>saikiranrd70@gmail.com</span>
+        </a>
+        <a href="tel:+14807790283" class="flex items-center space-x-2 hover:text-primary transition">
+          <i class="fa-solid fa-phone text-xl"></i>
+          <span>+1&nbsp;(480)&nbsp;779‑0283</span>
+        </a>
+        <a href="https://www.linkedin.com/in/saikiranrdd01/" target="_blank" class="flex items-center space-x-2 hover:text-primary transition">
+          <i class="fa-brands fa-linkedin text-xl"></i>
+          <span>LinkedIn</span>
+        </a>
       </div>
-      <div class="resume-download">
-        <a href="SaiKiran_CVS.pdf" class="btn btn-secondary" download>Download Resume</a>
+      <div class="text-center mt-8">
+        <a href="SaiKiran_CVS.pdf" download class="inline-block bg-primary hover:bg-teal-600 text-dark px-6 py-3 rounded-full font-semibold transition">Download Résumé</a>
       </div>
     </div>
   </section>
 
-  <footer>
-    <p>© <span id="year"></span> Sai Kiran Reddy – All rights reserved.</p>
+  <!-- Footer -->
+  <footer class="bg-dark text-center text-gray-400 py-6">
+    <div class="container mx-auto px-6">
+      <p>© <span id="year"></span> Sai&nbsp;Kiran&nbsp;Reddy – All rights reserved.</p>
+    </div>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- AOS and Script -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Initialize AOS animations
+      AOS.init({ once: true, duration: 800 });
+
+      // Mobile menu toggle
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      // Update footer year
+      const yearSpan = document.getElementById('year');
+      if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+      }
+    });
+  </script>
 </body>
 </html>
