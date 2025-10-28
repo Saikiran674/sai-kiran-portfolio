@@ -1,0 +1,273 @@
+/* Base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f7f8fa;
+}
+
+/* Navigation */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 1000;
+}
+
+#navbar .logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #0a192f;
+}
+
+#navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+#navbar .nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+#navbar .nav-links li a:hover {
+  color: #007bff;
+}
+
+/* Hero section */
+.hero {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #1f3a5f 0%, #5f7891 100%);
+  color: #ffffff;
+  padding-top: 6rem; /* offset for fixed nav */
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero .highlight {
+  color: #00c9a7;
+}
+
+.hero .subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #00c9a7;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #00a689;
+}
+
+.btn-secondary {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.btn-secondary:hover {
+  background-color: #0069d9;
+}
+
+/* Sections */
+.section {
+  padding: 4rem 0;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #0a192f;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Light section backgrounds */
+.bg-light {
+  background-color: #ffffff;
+}
+
+/* Skills grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-card {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  padding: 1.5rem;
+}
+
+.skill-card h3 {
+  margin-bottom: 0.75rem;
+  color: #007bff;
+}
+
+.skill-card ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  color: #555;
+}
+
+.skill-card ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #e0e0e0;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.timeline-icon {
+  position: absolute;
+  left: -8px;
+  top: 0;
+  background: #007bff;
+  color: #fff;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+
+.timeline-content h3 {
+  margin-bottom: 0.25rem;
+  color: #0a192f;
+}
+
+.timeline-content .date {
+  font-size: 0.875rem;
+  color: #555;
+  margin-bottom: 0.75rem;
+}
+
+.timeline-content ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  color: #555;
+}
+
+.timeline-content ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Education */
+.education-item {
+  background: #ffffff;
+  border-left: 4px solid #007bff;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.education-item h3 {
+  margin-bottom: 0.25rem;
+  color: #0a192f;
+}
+
+.education-item .date {
+  font-style: italic;
+  color: #555;
+}
+
+/* Contact */
+#contact .contact-info {
+  margin-top: 1rem;
+}
+
+#contact .contact-info p {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+#contact .contact-info i {
+  margin-right: 0.5rem;
+  color: #007bff;
+}
+
+#contact .resume-download {
+  margin-top: 1.5rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  background: #0a192f;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  #navbar .nav-links {
+    gap: 1rem;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero .subtitle {
+    font-size: 1rem;
+  }
+}
